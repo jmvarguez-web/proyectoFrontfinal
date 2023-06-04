@@ -1,0 +1,69 @@
+/* General Styles */
+
+body {
+  background: url("imagesGrid/bg.png") repeat;
+}
+header h1 {
+  padding: 20px 0;
+  font-size: 2.9em;
+  text-transform: uppercase;
+}
+.container {
+  background-color: white;
+  width: 90%;
+  max-width: 1000px;
+  margin: 1.6em auto 1.6em auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.container header,
+.content,
+.sidebar,
+.footer,
+.related-post {
+  background-color: white;
+  padding: 20px;
+  border: solid 1px #000;
+}
+.container header,
+footer.footer {
+  background-color: #1e272e;
+  color: white;
+  grid-column: 1/6;
+}
+main.content {
+  grid-column: 1/4;
+}
+/* Haz que la barra lateral del container abarque 2 columnas, un color de fondo #485460 y color de texto blanco, un display flex, el justificado del
+contenido debe estar al centro, la alineación de los ítems también, es decir, tanto vertical como horizontal deberá estar centrado y asigna la
+flex-direction para que la alineación sea vertical. */
+aside.sidebar {
+  grid-column: 4/6;
+  background-color: #485460;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+aside.sidebar img {
+  width: 100%;
+  margin-top: 5px;
+}
+article p,
+article h1 {
+  padding: 10px;
+}
+.related-post {
+  background-color: #2d3436;
+  color: white;
+  height: 180px;
+  /* estas propiedades es para centrar el contenido de elementos, en este caso el texto "otra publicación" se centra en horizontal y verticalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* esta prpiedad es para crear una transisión al pasar el mouse */
+  transition: all 0.5s ease;
+}
